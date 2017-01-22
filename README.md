@@ -1,47 +1,38 @@
-# jsreport-azure-storage
-[![NPM Version](http://img.shields.io/npm/v/jsreport-azure-storage.svg?style=flat-square)](https://npmjs.com/package/jsreport-azure-storage)
-[![Build Status](https://travis-ci.org/jsreport/jsreport-azure-storage.png?branch=master)](https://travis-ci.org/jsreport/jsreport-azure-storage)
+# jsreport-pkgcloud-storage
+[![NPM Version](http://img.shields.io/npm/v/jsreport-pkgcloud-storage.svg?style=flat-square)](https://npmjs.com/package/jsreport-pkgcloud-storage)
 
-> jsreport extension adding support for storing blobs in azure storage
+> jsreport extension adding support for storing blobs in pkgcloud supported cloud storage.
 
-Some of the jsreport extensions requires a blob storage for storing binary objects. This implementation stores these objects like output reports inside cost effective azure blob storage.
+Some of the jsreport extensions requires a blob storage for storing binary objects. This implementation stores these objects like output reports inside in a cloud storage service provider. This library supports:
+
+- Amazon
+- Azure
+- Google
+- HP
+- Openstack
+- Rackspace
 
 ##Installation
 
-> npm install jsreport-azure-storage
+> npm install jsreport-pkgcloud-storage
 
 ##Configuration
 
-Required options are:
-- `accountName`:  azure blob storage account name
-- `accountKey`:  azure blob storage account key
+### Rackspace
 
-Optionally you can set
-- `container`: azure blob storage container, this defaults to jsreport
-
-You can pass these options into jsreport in following ways:
-
-- Through global `blobStorage` options
+Global `blobStorage` options
 ```js
 {
 	"blobStorage": {  
-		"name": "azure-storage", 
-		"accountName": "...", 
-		"accountKey": "...", 
-		"container": "..."
-	 }
-}
+            "name": "pkgcloud-storage", 
+            "container": "...", // Defaults for `jsreports`
+            "connection":  { 
+                provider: 'rackspace', // required
+                username: 'your-user-name', // required
+                apiKey: 'your-api-key', // required
+                region: 'IAD', // required, regions can be found at:
+                               // http://www.rackspace.com/knowledge_center/article/about-regions
+                useInternal: false // optional, use to talk to serviceNet from a Rackspace machine
+            }
+        }
 ```	
-- Through extension name in global configuration
-```js
-{
-	"azure-storage": { }
-}
-```
-
-- Pass options directly when using jsreport-core manually
-```js
-var jsreport = require('jsreport-core')
-jsreport.use(require('jsreport-azure-storage')({}))
-```
-

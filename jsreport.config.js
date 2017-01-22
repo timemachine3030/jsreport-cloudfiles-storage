@@ -1,5 +1,5 @@
 module.exports = {
-  'name': 'azure-storage',
+  'name': 'cloudfiles-storage',
   'main': './lib/main.js',
   'dependencies': [],
   'skipInExeRender': true
