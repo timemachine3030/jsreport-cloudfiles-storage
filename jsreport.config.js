@@ -1,5 +1,5 @@
 module.exports = {
-  'name': 'cloudfiles-storage',
+  'name': 'pgkcloud-storage',
   'main': './lib/main.js',
   'dependencies': [],
   'skipInExeRender': true
