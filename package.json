@@ -1,9 +1,9 @@
 {
   "name": "jsreport-pkgcloud-storage",
-  "version": "0.2.1",
+  "version": "2.0.0",
   "description": "jsreport extension adding support for storing blobs with pkgcloud storage",
   "scripts": {
-    "test": "standard"
+    "test": "semistandard"
   },
   "homepage": "https://github.com/timemachine3030/jsreport-pkgcloud-storage",
   "repository": {
@@ -32,6 +32,6 @@
   "author": "Dan Lopretto",
   "devDependencies": {
     "eslint": "^1.6.0",
-    "standard": "^5.4.1"
+    "semistandard": "^16.0.1"
   }
 }

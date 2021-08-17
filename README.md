@@ -1,6 +1,7 @@
 # jsreport-pkgcloud-storage
 [![NPM Version](http://img.shields.io/npm/v/jsreport-pkgcloud-storage.svg?style=flat-square)](https://npmjs.com/package/jsreport-pkgcloud-storage)
 
+
 > jsreport extension adding support for storing blobs in pkgcloud supported cloud storage.
 
 Some of the jsreport extensions requires a blob storage for storing binary objects. This implementation stores these objects like output reports inside in a cloud storage service provider. This library supports:
@@ -12,11 +13,17 @@ Some of the jsreport extensions requires a blob storage for storing binary objec
 - Openstack
 - Rackspace
 
-##Installation
+## Installation
+
+jsreport version 1.x
+
+> npm install jsreport-pkgcloud-storage@1.0.0
+
+jsreport version 2.x
 
 > npm install jsreport-pkgcloud-storage
 
-##Configuration
+## Configuration
 
 ### Rackspace
 
