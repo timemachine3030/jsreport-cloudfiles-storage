@@ -1,6 +1,6 @@
 {
   "name": "jsreport-pkgcloud-storage",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "jsreport extension adding support for storing blobs with pkgcloud storage",
   "scripts": {
     "test": "mocha lib/main.spec.js --watch --no-timeout",
